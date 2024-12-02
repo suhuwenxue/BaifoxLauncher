@@ -1,0 +1,24 @@
+{
+  "name": "baifoxlauncher",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT License",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "format": "prettier --write .",
+    "preview": "rsbuild preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/plugin-shell": "~2.0.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.1.4",
+    "@rsbuild/plugin-vue": "^1.0.5",
+    "@tauri-apps/cli": "^2.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.7.2"
+  }
+}
