@@ -1,28 +1,52 @@
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+import { darkTheme } from 'naive-ui';
+import Window_close_component from './components/window_close_component.vue';
+import Window_maximzie_component from './components/window_maximzie_component.vue';
+import Window_minimzie_component from './components/window_minimzie_component.vue';
+import Root_layout_header from './layout/root_layout_header.vue';
+import Root_layout_main from './layout/root_layout_main.vue';
+
+export default defineComponent({
+  components: {
+    Root_layout_main,
+    Root_layout_header,
+    Window_minimzie_component,
+    Window_maximzie_component,
+    Window_close_component,
+  },
+  setup() {
+    return {
+      darkTheme,
+      theme: ref(null),
+    };
+  },
+});
+</script>
+
 <template>
-  <div class="content">
-    <h1>Rsbuild with Vue</h1>
-    <p>Start building amazing things with Rsbuild.</p>
-  </div>
+  <n-config-provider :theme="theme">
+    <n-layout position="absolute">
+      <root_layout_header />
+      <root_layout_main />
+    </n-layout>
+  </n-config-provider>
 </template>
 
-<style scoped>
-.content {
-  display: flex;
-  min-height: 100vh;
-  line-height: 1.1;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
+<style>
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.content h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
+.light-green {
+  height: 108px;
+  background-color: rgba(0, 128, 0, 0.12);
 }
 
-.content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.5;
+.green {
+  height: 108px;
+  background-color: rgba(0, 128, 0, 0.24);
 }
 </style>
