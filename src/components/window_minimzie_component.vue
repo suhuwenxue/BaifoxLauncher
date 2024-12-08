@@ -21,6 +21,7 @@ export default defineComponent({
     quaternary
     style="font-size: 30px; width: 40px"
     @click="window_minimzie"
+    data-tauri-drag-region
   >
     <n-icon>
       <minimzie_icon />

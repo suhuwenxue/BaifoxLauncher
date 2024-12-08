@@ -31,6 +31,7 @@ export default defineComponent({
     quaternary
     style="font-size: 30px; width: 40px"
     @click="button_window_close_dialog"
+    data-tauri-drag-region
   >
     <n-icon>
       <close_icon />

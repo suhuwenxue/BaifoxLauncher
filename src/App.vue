@@ -39,14 +39,4 @@ export default defineComponent({
   height: 100%;
   position: relative;
 }
-
-.light-green {
-  height: 108px;
-  background-color: rgba(0, 128, 0, 0.12);
-}
-
-.green {
-  height: 108px;
-  background-color: rgba(0, 128, 0, 0.24);
-}
 </style>

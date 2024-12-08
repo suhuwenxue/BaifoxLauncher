@@ -33,6 +33,7 @@
             :size="[0, 0]"
             warp="false"
             style="height: 100%"
+            data-tauri-drag-region
           >
             <window_minimzie_component />
             <window_maximzie_component />
@@ -45,7 +46,3 @@
     </n-flex>
   </n-layout-header>
 </template>
-
-<style scoped>
-
-</style>

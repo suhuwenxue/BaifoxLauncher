@@ -15,3 +15,5 @@ dist/
 tauri-build.ps1
 
 .tauri
+
+target

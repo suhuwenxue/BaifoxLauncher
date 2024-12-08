@@ -15,9 +15,9 @@ async function bootStrap() {
   // await setupStore(app)
 
   // 挂载路由
-  // await setupRouter(app)
+  await setupRouter(app)
 
   app.mount('#root')
-};
+}
 
 bootStrap().then();
