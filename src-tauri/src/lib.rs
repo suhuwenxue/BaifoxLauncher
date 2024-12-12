@@ -5,16 +5,6 @@ pub fn run() {
     let builder = tauri::Builder::default();
     let context = tauri::generate_context!();
 
-//     #[cfg(desktop)]
-//     {
-//         builder = builder.plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
-//             let _ = app
-//                 .get_webview_window("main")
-//                 .expect("no main window")
-//                 .set_focus();
-//         }));
-//     }
-
     builder
         // https://github.com/ayangweb/tauri-plugin-fs-pro
         .plugin(tauri_plugin_fs_pro::init())
@@ -30,7 +20,24 @@ pub fn run() {
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_os::init())
         .plugin(tauri_plugin_notification::init())
-        .plugin(tauri_plugin_log::Builder::new().build())
+        .plugin(tauri_plugin_log::Builder::new()
+            .target(tauri_plugin_log::Target::new(
+                tauri_plugin_log::TargetKind::LogDir {
+                    file_name: Some("logs".to_string()),
+                },
+            ))
+            .format(|out, message, record| {
+                out.finish(format_args!(
+                  "[{} {}] {}",
+                  record.level(),
+                  record.target(),
+                  message
+                ))
+              })
+            .timezone_strategy(tauri_plugin_log::TimezoneStrategy::UseLocal)
+            .max_file_size(40_960 /* bytes */)
+            .rotation_strategy(tauri_plugin_log::RotationStrategy::KeepAll)
+            .build())
         .plugin(tauri_plugin_clipboard_manager::init())
         .plugin(tauri_plugin_http::init())
         .plugin(tauri_plugin_shell::init())

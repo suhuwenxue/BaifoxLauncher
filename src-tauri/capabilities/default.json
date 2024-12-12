@@ -310,6 +310,8 @@
     "http:allow-fetch-read-body",
     "http:deny-fetch-read-body",
     "http:allow-fetch-send",
-    "http:deny-fetch-send"
+    "http:deny-fetch-send",
+    "os:allow-locale",
+    "os:default"
   ]
 }

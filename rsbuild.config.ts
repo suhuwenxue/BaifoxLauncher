@@ -34,7 +34,7 @@ export default defineConfig({
       description: 'Baifox Launcher',
     },
     tags: [
-      // { tag: 'script', attrs: { src: 'https://cdn.example.com/my-script.js' } },
+      { tag: 'div', attrs: { id: 'root-init' } },
     ],
   },
   tools: {

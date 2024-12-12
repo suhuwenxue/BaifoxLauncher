@@ -1,12 +1,12 @@
 <script lang="ts">
 import type { MenuOption } from 'naive-ui'
 import { NIcon } from 'naive-ui'
-import Sider_meun_fenlei from '../components/icon/sider_meun_fenlei.vue';
-import Sider_menu_gerenzhongxin from '../components/icon/sider_menu_gerenzhongxin.vue';
-import Sider_manu_downloads from '../components/icon/sider_manu_downloads.vue';
-import Sider_menu_xiangmu from '../components/icon/sider_menu_xiangmu.vue';
-import Sider_menu_settings from '../components/icon/sider_menu_settings.vue';
-import Sider_meun_about from '../components/icon/sider_meun_about.vue';
+import Sider_meun_fenlei from '../../components/main-app/icon/sider_meun_fenlei.vue';
+import Sider_menu_gerenzhongxin from '../../components/main-app/icon/sider_menu_gerenzhongxin.vue';
+import Sider_manu_downloads from '../../components/main-app/icon/sider_manu_downloads.vue';
+import Sider_menu_xiangmu from '../../components/main-app/icon/sider_menu_xiangmu.vue';
+import Sider_menu_settings from '../../components/main-app/icon/sider_menu_settings.vue';
+import Sider_meun_about from '../../components/main-app/icon/sider_meun_about.vue';
 import { defineComponent, h, ref } from 'vue'
 import { RouterLink } from 'vue-router';
 

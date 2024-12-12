@@ -1,9 +1,8 @@
 <script lang="ts">
 import { defineComponent} from 'vue';
-import baifox_setting from '../settings/baifox_setting.ts';
 
 export default defineComponent({
-  methods: { baifox_setting },
+  methods: {},
   setup() {
     return {
 
@@ -15,7 +14,7 @@ export default defineComponent({
 <template>
   <n-layout has-sider>
     <n-dialog-provider>
-      <n-button @click="baifox_setting()">
+      <n-button >
         根目录 检测
       </n-button>
     </n-dialog-provider>
