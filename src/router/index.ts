@@ -21,7 +21,25 @@ const main_router = createRouter({
       // label: '下 载',
       path: '/download',
       name: 'download',
-      component: () => import('../views/main-app/DownloadsView.vue')
+      redirect: '/minecraft-downloads',
+      component: () => import('../views/main-app/DownloadsView.vue'),
+      children: [
+        {
+          path: '/minecraft-downloads',
+          name: 'minecraft-downloads',
+          component: () => import('../views/main-app/downloads/MinecraftDownloadsView.vue')
+        },
+        {
+          path: '/resource-downloads',
+          name: 'resource-downloads',
+          component: () => import('../views/main-app/downloads/ResourceDownloadsView.vue')
+        },
+        {
+          path: '/path-downloads',
+          name: 'path-downloads',
+          component: () => import('../views/main-app/downloads/PathDownloadsView.vue')
+        }
+      ]
     },
     {
       // label: '工 作 区',

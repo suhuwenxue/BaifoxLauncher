@@ -1,44 +1,40 @@
 <script lang="ts">
-import { getLangText } from '../../settings/language/language.ts'
 import { defineComponent,ref } from 'vue'
 import { Window } from '@tauri-apps/api/window';
+import baifoxConfig from '../../settings/config';
 
 const appWindow = new Window('main');
 export default defineComponent({
   methods: {
-    getLangText,
-    step1_func() {
-      console.log(this.value);
-    },
-    getValue: function() {
-      return this.value;
+    async step1_func() {
+      await baifoxConfig('write', 'temp', 'setting_language', this.value)
+      location.reload();
+      window.location.href = '/steps2';
     }
   },
   setup() {
-    const language = ref('xxxx')
-    const value = ref(null)
+    const value = ref('en-US')
     return {
       value,
       options_language: [
         {
-          label: getLangText('Init.step1_content_language_list1'),
-          value: 'zh_cn',
+          label: '简体中文 [100%]',
+          value: 'zh-CN',
         },
         {
-          label: getLangText('Init.step1_content_language_list2'),
-          value: 'zh_tw',
+          label: '繁体中文 [100%]',
+          value: 'zh-TW',
         },
         {
-          label: getLangText('Init.step1_content_language_list3'),
-          value: 'en_us'
+          label: 'English [100%]',
+          value: 'en-US'
         },
         {
-          label: getLangText('Init.step1_content_language_list4'),
-          value: 'ja_jp',
-          disabled: true
+          label: '日本語 [75%]',
+          value: 'ja-JP',
+          disabled: false
         },
       ],
-      language,
       exit_button: () => {
         appWindow.close()
       }
@@ -59,22 +55,26 @@ export default defineComponent({
           />
         </n-gi>
         <n-gi :span="15">
-          <span>{{ getLangText('Init.step1_title') }}</span>
+          <span>{{ $t('Init.step1_title') }}</span>
         </n-gi>
       </n-grid>
     </template>
     <template #default>
-      <p>{{ getLangText('Init.step1_content') }}</p>
+      <span>{{ $t('Init.step1_content_1') }}</span>
+      <span>{{ $t('Init.step1_content_2') }}</span>
+      <span>{{ $t('Init.step1_content_3') }}</span>
+      <span>{{ $t('Init.step1_content_4') }}</span>
+      <span>{{ $t('Init.step1_content_5') }}</span>
       <n-divider />
       <n-grid :cols="2">
         <n-gi>
-          <p>{{ getLangText('Init.step1_content_language') + language }}</p>
-          <p>{{ getLangText('Init.step1_content_language_change_title') }}</p>
+          <p>{{ $t('Init.step1_content_language') }} {{ $t('Init.step1_content_language_text') }}</p>
+          <p>{{ $t('Init.step1_content_language_change_title') }}</p>
           <n-select v-model:value="value" :options="options_language" />
         </n-gi>
       </n-grid>
       <n-divider />
-      <p>{{ getLangText('Init.step1_content_language_change') }}</p>
+      <p>{{ $t('Init.step1_content_language_change') }}</p>
     </template>
     <template #action>
       <n-grid x-gap="12" :cols="16">
@@ -82,13 +82,13 @@ export default defineComponent({
         </n-gi>
         <n-gi>
           <n-button type="info" @click="exit_button">
-            {{ getLangText('Init.exit') }}
+            {{ $t('Init.exit') }}
           </n-button>
         </n-gi>
         <n-gi>
           <n-button type="info" @click="step1_func">
 <!--            <router-link to="/steps2" >-->
-              {{ getLangText('Init.next') }}
+            {{ $t('Init.next') }}
 <!--            </router-link>-->
           </n-button>
         </n-gi>

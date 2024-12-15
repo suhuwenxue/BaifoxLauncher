@@ -9,6 +9,8 @@ pub fn run() {
         // https://github.com/ayangweb/tauri-plugin-fs-pro
         .plugin(tauri_plugin_fs_pro::init())
         // https://github.com/HuakunShen/tauri-plugin-network
+        .plugin(tauri_plugin_network::init())
+        // https://github.com/HuakunShen/tauri-plugin-system-info
         .plugin(tauri_plugin_system_info::init())
         .plugin(tauri_plugin_single_instance::init(|app, _args, _cwd| {
             let _ = show_window(app);

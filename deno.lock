@@ -28,6 +28,8 @@
     "npm:typescript@^5.7.2": "5.7.2",
     "npm:unplugin-auto-import@~0.18.6": "0.18.6",
     "npm:unplugin-vue-components@~0.27.5": "0.27.5_vue@3.5.13__typescript@5.7.2_typescript@5.7.2",
+    "npm:uuid@^11.0.3": "11.0.3",
+    "npm:vue-i18n@^10.0.5": "10.0.5_vue@3.5.13__typescript@5.7.2_typescript@5.7.2",
     "npm:vue-router@^4.5.0": "4.5.0_vue@3.5.13__typescript@5.7.2_typescript@5.7.2",
     "npm:vue@^3.5.13": "3.5.13_typescript@5.7.2"
   },
@@ -91,6 +93,23 @@
     },
     "@inquirer/figures@1.0.8": {
       "integrity": "sha512-tKd+jsmhq21AP1LhexC0pPwsCxEhGgAkg28byjJAd+xhmIs8LUX8JbUc3vBf3PhLxWiB5EvyBE5X7JSPAqMAqg=="
+    },
+    "@intlify/core-base@10.0.5": {
+      "integrity": "sha512-F3snDTQs0MdvnnyzTDTVkOYVAZOE/MHwRvF7mn7Jw1yuih4NrFYLNYIymGlLmq4HU2iIdzYsZ7f47bOcwY73XQ==",
+      "dependencies": [
+        "@intlify/message-compiler",
+        "@intlify/shared"
+      ]
+    },
+    "@intlify/message-compiler@10.0.5": {
+      "integrity": "sha512-6GT1BJ852gZ0gItNZN2krX5QAmea+cmdjMvsWohArAZ3GmHdnNANEcF9JjPXAMRtQ6Ux5E269ymamg/+WU6tQA==",
+      "dependencies": [
+        "@intlify/shared",
+        "source-map-js"
+      ]
+    },
+    "@intlify/shared@10.0.5": {
+      "integrity": "sha512-bmsP4L2HqBF6i6uaMqJMcFBONVjKt+siGluRq4Ca4C0q7W2eMaVZr8iCgF9dKbcVXutftkC7D6z2SaSMmLiDyA=="
     },
     "@isaacs/cliui@8.0.2": {
       "integrity": "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==",
@@ -2671,6 +2690,9 @@
     "util-deprecate@1.0.2": {
       "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="
     },
+    "uuid@11.0.3": {
+      "integrity": "sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg=="
+    },
     "valibot@0.40.0_typescript@5.7.2": {
       "integrity": "sha512-XHKnaVtwHqxPwnGOsLrwka9CEaL7yNeLNp707OKv/bmT29GnPVdl6PxBOZ6BW7hF66/6QT6iVbOlnW7qVPmoKw==",
       "dependencies": [
@@ -2694,6 +2716,15 @@
     "vue-demi@0.14.10_vue@3.5.13__typescript@5.7.2_typescript@5.7.2": {
       "integrity": "sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==",
       "dependencies": [
+        "vue"
+      ]
+    },
+    "vue-i18n@10.0.5_vue@3.5.13__typescript@5.7.2_typescript@5.7.2": {
+      "integrity": "sha512-9/gmDlCblz3i8ypu/afiIc/SUIfTTE1mr0mZhb9pk70xo2csHAM9mp2gdQ3KD2O0AM3Hz/5ypb+FycTj/lHlPQ==",
+      "dependencies": [
+        "@intlify/core-base",
+        "@intlify/shared",
+        "@vue/devtools-api",
         "vue"
       ]
     },
@@ -2886,6 +2917,8 @@
         "npm:typescript@^5.7.2",
         "npm:unplugin-auto-import@~0.18.6",
         "npm:unplugin-vue-components@~0.27.5",
+        "npm:uuid@^11.0.3",
+        "npm:vue-i18n@^10.0.5",
         "npm:vue-router@^4.5.0",
         "npm:vue@^3.5.13"
       ]

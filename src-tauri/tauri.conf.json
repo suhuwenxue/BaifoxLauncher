@@ -114,7 +114,7 @@
           "zh-CN"
         ],
         "upgradeCode": "acc5977e-b412-5dca-90ea-43a52acae092",
-        "version": "0.2.0.1"
+        "version": "../package.json#wixVersion"
       }
     }
   },
