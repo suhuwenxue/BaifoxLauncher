@@ -1,4 +1,6 @@
 # Rsbuild Project
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsuhuwenxue%2FBaifoxLauncher.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsuhuwenxue%2FBaifoxLauncher?ref=badge_shield)
+
 
 ## Setup
 
@@ -27,3 +29,7 @@ Preview the production build locally:
 ```bash
 pnpm preview
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsuhuwenxue%2FBaifoxLauncher.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsuhuwenxue%2FBaifoxLauncher?ref=badge_large)
