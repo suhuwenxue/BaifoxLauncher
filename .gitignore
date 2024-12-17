@@ -17,3 +17,4 @@ tauri-build.ps1
 .tauri
 
 target
+old-src

@@ -1,24 +1,15 @@
 import { createApp } from 'vue';
-import App from './App.vue';
-import Init from './Init.vue'
 
-import './index.css';
-import './assets/icons/xiaohu-icon/iconfont.js'
-import './assets/icons/baifoxlauncher-class2/iconfont.js'
-import './assets/icons/baifoxlauncher-class1/iconfont.js'
-
-import baifox_setting from './settings/baifox_setting.ts';
+import BaifoxMain from '@/baifox-main.vue'
+import baifox from '@fox/baifox.ts';
 
 // 页引导
 async function bootStrap() {
-  // 创建vue app实例
-  const app = createApp(App);
-  // 创建vue app实例
-  const app_init = createApp(Init);
-  // 挂载状态管理
-  // await setupStore(app)
 
-  // 应用 启动相关设置
-  await baifox_setting(app, app_init);
+  // 创建 vue主实例 main
+  const baifoxMain = createApp(BaifoxMain);
 
-} bootStrap().then();
+  await baifox(baifoxMain)
+}
+
+bootStrap().then();

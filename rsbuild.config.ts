@@ -1,15 +1,22 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginVue } from '@rsbuild/plugin-vue';
+import { pluginPug } from '@rsbuild/plugin-pug'
 import AutoImport from 'unplugin-auto-import/rspack'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/rspack'
 
 export default defineConfig({
-  plugins: [pluginVue()],
+  plugins: [pluginVue(),pluginPug()],
   server: {
     base: '/',
 	  host: "0.0.0.0",
 	  port: 24680,
+  },
+  resolve: {
+    alias: {
+      '@': './src',
+      '@fox': './src/.baifox'
+    },
   },
   html: {
     title({ entryName }) {
@@ -34,7 +41,7 @@ export default defineConfig({
       description: 'Baifox Launcher',
     },
     tags: [
-      { tag: 'div', attrs: { id: 'root-init' } },
+      { tag: 'div', attrs: { id: 'init' } },
     ],
   },
   tools: {

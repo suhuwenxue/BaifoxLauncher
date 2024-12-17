@@ -6,12 +6,24 @@ export default {
       menu: {
         menu_1: {
           main_title: 'Minecraft',
+          sub_title_1: '自动安装',
+          sub_title_2: '手动安装',
+          sub_title_3: '服务器下载',
         },
         menu_2: {
-          main_title: '资源'
+          main_title: '资源',
+          sub_title_1: '整合包',
+          sub_title_2: '材质包',
+          sub_title_3: '模组',
+          sub_title_4: '模组 附件包',
+          sub_title_5: '光影包',
+          sub_title_6: '世界',
+          sub_title_7: '数据包',
         },
         menu_3: {
-          main_title: '运行环境'
+          main_title: '运行环境',
+          sub_title_1: 'Java',
+          sub_title_2: 'gradle',
         },
       }
 

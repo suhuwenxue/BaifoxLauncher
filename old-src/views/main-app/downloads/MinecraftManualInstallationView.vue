@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>res down</p>
+
 </template>
 
 <style scoped>

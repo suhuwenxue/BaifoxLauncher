@@ -1,0 +1,1 @@
+export { setupForwardConsole } from './forwardConsole'

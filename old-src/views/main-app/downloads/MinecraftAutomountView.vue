@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p> path down </p>
+
 </template>
 
 <style scoped>

@@ -8,30 +8,59 @@ let _t = i18n.global.t
 
 const menuOptions: MenuOption[] = [
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            path: '/minecraft-downloads'
-          }
-        },
-        { default: () => _t('Main.downloads.menu.menu_1.main_title') }
-      ),
+    label: _t('Main.downloads.menu.menu_1.main_title'),
     key: 'Minecraft-download',
+    children: [
+      {
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                path: '/minecraft-downloads'
+              }
+            },
+            {
+              default: () => _t('Main.downloads.menu.menu_1.sub_title_1')
+            }
+          ),
+        key: 'Minecraft-download-sub_1',
+      },
+      {
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                path: '/minecraft-mods'
+              }
+            },
+            {
+              default: () => _t('Main.downloads.menu.menu_1.sub_title_2')
+            }
+          ),
+        key: 'Minecraft-download-sub_2',
+      },
+    ]
   },
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            path: '/resource-downloads'
-          }
-        },
-        { default: () => _t('Main.downloads.menu.menu_2.main_title')}
-      ),
+    label: _t('Main.downloads.menu.menu_2.main_title'),
+    // label: () =>
+    //   h(
+    //     RouterLink,
+    //     {
+    //       to: {
+    //         path: '/resource-downloads'
+    //       }
+    //     },
+    //     { default: () => _t('Main.downloads.menu.menu_2.main_title')}
+    //   ),
     key: 'resource-download',
+    children: [
+      {
+
+      }
+    ]
   },
   {
     label: () =>

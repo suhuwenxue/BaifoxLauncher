@@ -18,7 +18,15 @@
     /* type checking */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+
+    "esModuleInterop": true,
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["src/*"],
+      "@fox/*": ["src/.baifox/*"],
+    }
   },
   "include": ["src"]
 }
